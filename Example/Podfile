@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'JPromise_Example' do
+  pod 'JPromise', :path => '../'
+
+  target 'JPromise_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
