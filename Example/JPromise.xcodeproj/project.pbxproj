@@ -63,9 +63,9 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9572168059C479EBBF2D9C75 /* Pods-JPromise_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPromise_Tests.release.xcconfig"; path = "Target Support Files/Pods-JPromise_Tests/Pods-JPromise_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A5B94780F113AFAD79D452C0 /* JPromise.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JPromise.podspec; path = ../JPromise.podspec; sourceTree = "<group>"; };
-		AA179546E285199ACA6B0010 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E729B936138D3EB4DD4727A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A5B94780F113AFAD79D452C0 /* JPromise.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JPromise.podspec; path = ../JPromise.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA179546E285199ACA6B0010 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E729B936138D3EB4DD4727A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FB51EA2089D276CAE17501AB /* Pods-JPromise_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPromise_Example.release.xcconfig"; path = "Target Support Files/Pods-JPromise_Example/Pods-JPromise_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,6 @@
 				1B42667D0AF14B7EFB57C7BE /* Pods-JPromise_Tests.debug.xcconfig */,
 				9572168059C479EBBF2D9C75 /* Pods-JPromise_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

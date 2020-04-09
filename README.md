@@ -1,6 +1,6 @@
 # JPromise
 
-[![CI Status](https://img.shields.io/travis/15012426009@163.com/JPromise.svg?style=flat)](https://travis-ci.org/15012426009@163.com/JPromise)
+[![CI Status](https://img.shields.io/travis/jams/JPromise.svg?style=flat)](https://travis-ci.org/jams/JPromise)
 [![Version](https://img.shields.io/cocoapods/v/JPromise.svg?style=flat)](https://cocoapods.org/pods/JPromise)
 [![License](https://img.shields.io/cocoapods/l/JPromise.svg?style=flat)](https://cocoapods.org/pods/JPromise)
 [![Platform](https://img.shields.io/cocoapods/p/JPromise.svg?style=flat)](https://cocoapods.org/pods/JPromise)
@@ -22,7 +22,7 @@ pod 'JPromise'
 
 ## Author
 
-15012426009@163.com, liuqiang04@corp.netease.com
+jams, 1411702600@qq.com
 
 ## License
 

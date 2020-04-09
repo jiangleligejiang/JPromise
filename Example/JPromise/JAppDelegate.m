@@ -2,8 +2,8 @@
 //  JAppDelegate.m
 //  JPromise
 //
-//  Created by 15012426009@163.com on 04/09/2020.
-//  Copyright (c) 2020 15012426009@163.com. All rights reserved.
+//  Created by jams on 04/09/2020.
+//  Copyright (c) 2020 jams. All rights reserved.
 //
 
 #import "JAppDelegate.h"

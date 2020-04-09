@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		157E72BDECC457AB35513504A97FFE33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		43F1B9EE875B10D8FE2023FA82BD02FF /* JPromise-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB52B03E12E581885D29253E42145F7C /* JPromise-dummy.m */; };
+		4C6644D243494A8EACFA4F74A812E2E4 /* Pods-JPromise_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E857D7EE01928ECE62DD2EB026533F /* Pods-JPromise_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DA366DC4D828DB03843F1F23C2149FC /* Pods-JPromise_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33D318D0A76C84CE1A1D2E7A233DF0 /* Pods-JPromise_Tests-dummy.m */; };
+		5FAE59F9AFB923F97E0A23FFC1C5A83C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		772611B262D2B624FCCF1D168D5C2A2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9352C7550BC8110DEF4222331A808EA4 /* Pods-JPromise_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5186475EA2960137CE8A7663DDF55D /* Pods-JPromise_Example-dummy.m */; };
+		A181BF65243F402800AF9596 /* JPromise+Then.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF4F243F402700AF9596 /* JPromise+Then.h */; };
+		A181BF66243F402800AF9596 /* JPromiseArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF50243F402700AF9596 /* JPromiseArray.m */; };
+		A181BF67243F402800AF9596 /* JPromise+Then.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF51243F402700AF9596 /* JPromise+Then.m */; };
+		A181BF68243F402800AF9596 /* NSError+Promise.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF52243F402800AF9596 /* NSError+Promise.h */; };
+		A181BF69243F402800AF9596 /* NSError+Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF53243F402800AF9596 /* NSError+Promise.m */; };
+		A181BF6A243F402800AF9596 /* JPromise+Catch.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF54243F402800AF9596 /* JPromise+Catch.m */; };
+		A181BF6B243F402800AF9596 /* JPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF55243F402800AF9596 /* JPromise.h */; };
+		A181BF6C243F402800AF9596 /* JPromise+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF57243F402800AF9596 /* JPromise+Internal.h */; };
+		A181BF6D243F402800AF9596 /* JPromiseInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF58243F402800AF9596 /* JPromiseInternal.h */; };
+		A181BF6E243F402800AF9596 /* NSMethodSignatureForBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF59243F402800AF9596 /* NSMethodSignatureForBlock.h */; };
+		A181BF6F243F402800AF9596 /* JPromise+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF5A243F402800AF9596 /* JPromise+Internal.m */; };
+		A181BF70243F402800AF9596 /* JPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF5B243F402800AF9596 /* JPromise+All.m */; };
+		A181BF71243F402800AF9596 /* JPromise+All.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF5C243F402800AF9596 /* JPromise+All.h */; };
+		A181BF72243F402800AF9596 /* JPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF5D243F402800AF9596 /* JPromise.m */; };
+		A181BF73243F402800AF9596 /* JPromiseArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF5E243F402800AF9596 /* JPromiseArray.h */; };
+		A181BF74243F402800AF9596 /* JPromise+Cancel.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF5F243F402800AF9596 /* JPromise+Cancel.h */; };
+		A181BF75243F402800AF9596 /* JPromise+Cancel.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF60243F402800AF9596 /* JPromise+Cancel.m */; };
+		A181BF76243F402800AF9596 /* JPromise+Always.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BF61243F402800AF9596 /* JPromise+Always.m */; };
+		A181BF77243F402800AF9596 /* JPromise+Catch.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF62243F402800AF9596 /* JPromise+Catch.h */; };
+		A181BF78243F402800AF9596 /* JPromise+Always.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF63243F402800AF9596 /* JPromise+Always.h */; };
+		A181BF79243F402800AF9596 /* JPromiseDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A181BF64243F402800AF9596 /* JPromiseDefine.h */; };
+		AE347E910B048AAE50364362156FFD7B /* JPromise-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3228894CA6EE03F6B4F658C031D0F74D /* JPromise-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED04FB4428E14DA6DF3AD520469CC32E /* Pods-JPromise_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5147266E275B0002ACCC9C222A6AC630 /* Pods-JPromise_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4767FC61F0ECCF03870FEA66AA8F90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55CEA7BDED6388AD41D6A8A1249FD641;
+			remoteInfo = JPromise;
+		};
+		E88C857BE4B9791FF4ABA5B5803267AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6D631C3BC2E258979A8C7BA5EE61BF3;
+			remoteInfo = "Pods-JPromise_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01448B8D9FC3FF431746319E96248EA0 /* Pods-JPromise_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPromise_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		04D0687CDF4C247CAAF1E734A00D9930 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		06DCCCEF908BF20A217CE29FB06EA8B2 /* JPromise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPromise.xcconfig; sourceTree = "<group>"; };
+		0AF7247BA2FB9DBDF03309EAFEC02FED /* JPromise-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JPromise-Info.plist"; sourceTree = "<group>"; };
+		0AF99C02F415D9AE73FC0D2E9E1B2F03 /* Pods-JPromise_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JPromise_Tests.modulemap"; sourceTree = "<group>"; };
+		0D5186475EA2960137CE8A7663DDF55D /* Pods-JPromise_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPromise_Example-dummy.m"; sourceTree = "<group>"; };
+		208EA909492C2F77DC951C3FDED1EF58 /* JPromise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JPromise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2250B0980FC2DCBB4C849D3E5AC56AF5 /* Pods_JPromise_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPromise_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3228894CA6EE03F6B4F658C031D0F74D /* JPromise-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPromise-umbrella.h"; sourceTree = "<group>"; };
+		32F8A1F64716F5EAB88223A03420A8D8 /* JPromise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JPromise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		346A43AF483440332F772DF5D5E35BD3 /* Pods-JPromise_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPromise_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4D18555F1EFA142DC3C5F13115AF3E9E /* Pods-JPromise_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPromise_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		50CEDBABE1C71354F88067E77CB01406 /* Pods-JPromise_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPromise_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5147266E275B0002ACCC9C222A6AC630 /* Pods-JPromise_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPromise_Example-umbrella.h"; sourceTree = "<group>"; };
+		59327A3C8A204448AE3655F3A4439D0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		62CA8783E20AF6F0C499E25F321168E0 /* Pods-JPromise_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPromise_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		648E81A9E55950FFA7301BA72EE09BEC /* Pods-JPromise_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JPromise_Example.modulemap"; sourceTree = "<group>"; };
+		7DCBECEA92215CA830D8E5DC154D3DB2 /* JPromise-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPromise-prefix.pch"; sourceTree = "<group>"; };
+		866AF5903F60C88868CE77D62AF7F86E /* Pods-JPromise_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPromise_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA48B8AA798D0944EEEEA2438195265 /* Pods_JPromise_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPromise_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A181BF4F243F402700AF9596 /* JPromise+Then.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPromise+Then.h"; sourceTree = "<group>"; };
+		A181BF50243F402700AF9596 /* JPromiseArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPromiseArray.m; sourceTree = "<group>"; };
+		A181BF51243F402700AF9596 /* JPromise+Then.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPromise+Then.m"; sourceTree = "<group>"; };
+		A181BF52243F402800AF9596 /* NSError+Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Promise.h"; sourceTree = "<group>"; };
+		A181BF53243F402800AF9596 /* NSError+Promise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Promise.m"; sourceTree = "<group>"; };
+		A181BF54243F402800AF9596 /* JPromise+Catch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPromise+Catch.m"; sourceTree = "<group>"; };
+		A181BF55243F402800AF9596 /* JPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPromise.h; sourceTree = "<group>"; };
+		A181BF57243F402800AF9596 /* JPromise+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPromise+Internal.h"; sourceTree = "<group>"; };
+		A181BF58243F402800AF9596 /* JPromiseInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPromiseInternal.h; sourceTree = "<group>"; };
+		A181BF59243F402800AF9596 /* NSMethodSignatureForBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureForBlock.h; sourceTree = "<group>"; };
+		A181BF5A243F402800AF9596 /* JPromise+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPromise+Internal.m"; sourceTree = "<group>"; };
+		A181BF5B243F402800AF9596 /* JPromise+All.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPromise+All.m"; sourceTree = "<group>"; };
+		A181BF5C243F402800AF9596 /* JPromise+All.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPromise+All.h"; sourceTree = "<group>"; };
+		A181BF5D243F402800AF9596 /* JPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPromise.m; sourceTree = "<group>"; };
+		A181BF5E243F402800AF9596 /* JPromiseArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPromiseArray.h; sourceTree = "<group>"; };
+		A181BF5F243F402800AF9596 /* JPromise+Cancel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPromise+Cancel.h"; sourceTree = "<group>"; };
+		A181BF60243F402800AF9596 /* JPromise+Cancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPromise+Cancel.m"; sourceTree = "<group>"; };
+		A181BF61243F402800AF9596 /* JPromise+Always.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPromise+Always.m"; sourceTree = "<group>"; };
+		A181BF62243F402800AF9596 /* JPromise+Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPromise+Catch.h"; sourceTree = "<group>"; };
+		A181BF63243F402800AF9596 /* JPromise+Always.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPromise+Always.h"; sourceTree = "<group>"; };
+		A181BF64243F402800AF9596 /* JPromiseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPromiseDefine.h; sourceTree = "<group>"; };
+		AB88EE401922EA5219DA86EFBC2577C1 /* Pods-JPromise_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPromise_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B8E857D7EE01928ECE62DD2EB026533F /* Pods-JPromise_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPromise_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B93ECD2CF10BEF6FBD3C9F6F31361394 /* Pods-JPromise_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPromise_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0F1E6AB94129115A64BD445CDF66E0D /* Pods-JPromise_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPromise_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C3DA02B1DAA23847AE71373AA87630BB /* Pods-JPromise_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPromise_Example-Info.plist"; sourceTree = "<group>"; };
+		C8E614A7786037E523578E9F41F72E59 /* JPromise.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JPromise.modulemap; sourceTree = "<group>"; };
+		DB52B03E12E581885D29253E42145F7C /* JPromise-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JPromise-dummy.m"; sourceTree = "<group>"; };
+		F8F70591F18023D1C72B261F62D315A6 /* Pods-JPromise_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPromise_Example-frameworks.sh"; sourceTree = "<group>"; };
+		FA33D318D0A76C84CE1A1D2E7A233DF0 /* Pods-JPromise_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPromise_Tests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1FE5E39374BADA99D0491D87C90775A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772611B262D2B624FCCF1D168D5C2A2F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC21EC5BC4136C7E202695D9CA8F519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157E72BDECC457AB35513504A97FFE33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD3A9FA9D46F28B18C3CAC4A4E013A35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAE59F9AFB923F97E0A23FFC1C5A83C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0858357A4B86644DD1A744FDE21C0779 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27BB9F515E4A82420B07A30B0EC0B700 /* JPromise */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		27BB9F515E4A82420B07A30B0EC0B700 /* JPromise */ = {
+			isa = PBXGroup;
+			children = (
+				A181BF7D243F420500AF9596 /* Classes */,
+				9FE9DB78294411075F18CCDD62FCC4E3 /* Pod */,
+				4DDFDE396112F4A3278139E49C4E8E2B /* Support Files */,
+			);
+			name = JPromise;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4DDFDE396112F4A3278139E49C4E8E2B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8E614A7786037E523578E9F41F72E59 /* JPromise.modulemap */,
+				06DCCCEF908BF20A217CE29FB06EA8B2 /* JPromise.xcconfig */,
+				DB52B03E12E581885D29253E42145F7C /* JPromise-dummy.m */,
+				0AF7247BA2FB9DBDF03309EAFEC02FED /* JPromise-Info.plist */,
+				7DCBECEA92215CA830D8E5DC154D3DB2 /* JPromise-prefix.pch */,
+				3228894CA6EE03F6B4F658C031D0F74D /* JPromise-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JPromise";
+			sourceTree = "<group>";
+		};
+		9FE9DB78294411075F18CCDD62FCC4E3 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				32F8A1F64716F5EAB88223A03420A8D8 /* JPromise.podspec */,
+				04D0687CDF4C247CAAF1E734A00D9930 /* LICENSE */,
+				59327A3C8A204448AE3655F3A4439D0C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A181BF56243F402800AF9596 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A181BF57243F402800AF9596 /* JPromise+Internal.h */,
+				A181BF58243F402800AF9596 /* JPromiseInternal.h */,
+				A181BF5A243F402800AF9596 /* JPromise+Internal.m */,
+				A181BF59243F402800AF9596 /* NSMethodSignatureForBlock.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		A181BF7D243F420500AF9596 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A181BF64243F402800AF9596 /* JPromiseDefine.h */,
+				A181BF56243F402800AF9596 /* Internal */,
+				A181BF55243F402800AF9596 /* JPromise.h */,
+				A181BF5D243F402800AF9596 /* JPromise.m */,
+				A181BF5C243F402800AF9596 /* JPromise+All.h */,
+				A181BF5B243F402800AF9596 /* JPromise+All.m */,
+				A181BF63243F402800AF9596 /* JPromise+Always.h */,
+				A181BF61243F402800AF9596 /* JPromise+Always.m */,
+				A181BF5F243F402800AF9596 /* JPromise+Cancel.h */,
+				A181BF60243F402800AF9596 /* JPromise+Cancel.m */,
+				A181BF62243F402800AF9596 /* JPromise+Catch.h */,
+				A181BF54243F402800AF9596 /* JPromise+Catch.m */,
+				A181BF4F243F402700AF9596 /* JPromise+Then.h */,
+				A181BF51243F402700AF9596 /* JPromise+Then.m */,
+				A181BF5E243F402800AF9596 /* JPromiseArray.h */,
+				A181BF50243F402700AF9596 /* JPromiseArray.m */,
+				A181BF52243F402800AF9596 /* NSError+Promise.h */,
+				A181BF53243F402800AF9596 /* NSError+Promise.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B6D5643AD28C908E4F05DDBAAC9B25A6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B95BFD5A6553903F01D1A47D5608CB1F /* Pods-JPromise_Example */,
+				D8D55D5572B88F543C5A9067CC179079 /* Pods-JPromise_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B95BFD5A6553903F01D1A47D5608CB1F /* Pods-JPromise_Example */ = {
+			isa = PBXGroup;
+			children = (
+				648E81A9E55950FFA7301BA72EE09BEC /* Pods-JPromise_Example.modulemap */,
+				01448B8D9FC3FF431746319E96248EA0 /* Pods-JPromise_Example-acknowledgements.markdown */,
+				B93ECD2CF10BEF6FBD3C9F6F31361394 /* Pods-JPromise_Example-acknowledgements.plist */,
+				0D5186475EA2960137CE8A7663DDF55D /* Pods-JPromise_Example-dummy.m */,
+				F8F70591F18023D1C72B261F62D315A6 /* Pods-JPromise_Example-frameworks.sh */,
+				C3DA02B1DAA23847AE71373AA87630BB /* Pods-JPromise_Example-Info.plist */,
+				5147266E275B0002ACCC9C222A6AC630 /* Pods-JPromise_Example-umbrella.h */,
+				C0F1E6AB94129115A64BD445CDF66E0D /* Pods-JPromise_Example.debug.xcconfig */,
+				50CEDBABE1C71354F88067E77CB01406 /* Pods-JPromise_Example.release.xcconfig */,
+			);
+			name = "Pods-JPromise_Example";
+			path = "Target Support Files/Pods-JPromise_Example";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CC622652A97C55D1A8CD96890A61F15A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				208EA909492C2F77DC951C3FDED1EF58 /* JPromise.framework */,
+				2250B0980FC2DCBB4C849D3E5AC56AF5 /* Pods_JPromise_Example.framework */,
+				9EA48B8AA798D0944EEEEA2438195265 /* Pods_JPromise_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0858357A4B86644DD1A744FDE21C0779 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				CC622652A97C55D1A8CD96890A61F15A /* Products */,
+				B6D5643AD28C908E4F05DDBAAC9B25A6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8D55D5572B88F543C5A9067CC179079 /* Pods-JPromise_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0AF99C02F415D9AE73FC0D2E9E1B2F03 /* Pods-JPromise_Tests.modulemap */,
+				AB88EE401922EA5219DA86EFBC2577C1 /* Pods-JPromise_Tests-acknowledgements.markdown */,
+				346A43AF483440332F772DF5D5E35BD3 /* Pods-JPromise_Tests-acknowledgements.plist */,
+				FA33D318D0A76C84CE1A1D2E7A233DF0 /* Pods-JPromise_Tests-dummy.m */,
+				866AF5903F60C88868CE77D62AF7F86E /* Pods-JPromise_Tests-Info.plist */,
+				B8E857D7EE01928ECE62DD2EB026533F /* Pods-JPromise_Tests-umbrella.h */,
+				4D18555F1EFA142DC3C5F13115AF3E9E /* Pods-JPromise_Tests.debug.xcconfig */,
+				62CA8783E20AF6F0C499E25F321168E0 /* Pods-JPromise_Tests.release.xcconfig */,
+			);
+			name = "Pods-JPromise_Tests";
+			path = "Target Support Files/Pods-JPromise_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		349B6FB617911EB4484A2267C7E0653A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A181BF68243F402800AF9596 /* NSError+Promise.h in Headers */,
+				A181BF74243F402800AF9596 /* JPromise+Cancel.h in Headers */,
+				A181BF71243F402800AF9596 /* JPromise+All.h in Headers */,
+				A181BF6B243F402800AF9596 /* JPromise.h in Headers */,
+				A181BF6C243F402800AF9596 /* JPromise+Internal.h in Headers */,
+				A181BF79243F402800AF9596 /* JPromiseDefine.h in Headers */,
+				A181BF77243F402800AF9596 /* JPromise+Catch.h in Headers */,
+				A181BF73243F402800AF9596 /* JPromiseArray.h in Headers */,
+				A181BF65243F402800AF9596 /* JPromise+Then.h in Headers */,
+				A181BF78243F402800AF9596 /* JPromise+Always.h in Headers */,
+				A181BF6D243F402800AF9596 /* JPromiseInternal.h in Headers */,
+				A181BF6E243F402800AF9596 /* NSMethodSignatureForBlock.h in Headers */,
+				AE347E910B048AAE50364362156FFD7B /* JPromise-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66920B1C6FE818B32E15E64B70FF3618 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6644D243494A8EACFA4F74A812E2E4 /* Pods-JPromise_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1994C177CA51C01CD95784894C2853 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED04FB4428E14DA6DF3AD520469CC32E /* Pods-JPromise_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		55CEA7BDED6388AD41D6A8A1249FD641 /* JPromise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B649D96EF495EF25A45C36263B0DD74 /* Build configuration list for PBXNativeTarget "JPromise" */;
+			buildPhases = (
+				349B6FB617911EB4484A2267C7E0653A /* Headers */,
+				E68D20B9166E75E95918D9473DA01B6E /* Sources */,
+				BAC21EC5BC4136C7E202695D9CA8F519 /* Frameworks */,
+				3AF6B1998B6B375C62873B18B5411012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPromise;
+			productName = JPromise;
+			productReference = 208EA909492C2F77DC951C3FDED1EF58 /* JPromise.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A6C11433C606A19286E94691622D299D /* Pods-JPromise_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57056B4EAFB0DD1C048400381B4694C /* Build configuration list for PBXNativeTarget "Pods-JPromise_Tests" */;
+			buildPhases = (
+				66920B1C6FE818B32E15E64B70FF3618 /* Headers */,
+				3B213D5DEE3C18460A8CBF7E8D89511A /* Sources */,
+				BD3A9FA9D46F28B18C3CAC4A4E013A35 /* Frameworks */,
+				8431D85157F7D038F7E72DA8E4F61B67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B647DFABE0D2DDDF309735239C04EB8 /* PBXTargetDependency */,
+			);
+			name = "Pods-JPromise_Tests";
+			productName = "Pods-JPromise_Tests";
+			productReference = 9EA48B8AA798D0944EEEEA2438195265 /* Pods_JPromise_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B6D631C3BC2E258979A8C7BA5EE61BF3 /* Pods-JPromise_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA6CEEB1D54F34F8926938946BA1E190 /* Build configuration list for PBXNativeTarget "Pods-JPromise_Example" */;
+			buildPhases = (
+				CB1994C177CA51C01CD95784894C2853 /* Headers */,
+				1554CD9E85FD0384840BC877507AA119 /* Sources */,
+				A1FE5E39374BADA99D0491D87C90775A /* Frameworks */,
+				734FD1437D9F998F111E1E6E6364712B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CACBDB1E090719170D913D91D5936499 /* PBXTargetDependency */,
+			);
+			name = "Pods-JPromise_Example";
+			productName = "Pods-JPromise_Example";
+			productReference = 2250B0980FC2DCBB4C849D3E5AC56AF5 /* Pods_JPromise_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CC622652A97C55D1A8CD96890A61F15A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55CEA7BDED6388AD41D6A8A1249FD641 /* JPromise */,
+				B6D631C3BC2E258979A8C7BA5EE61BF3 /* Pods-JPromise_Example */,
+				A6C11433C606A19286E94691622D299D /* Pods-JPromise_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AF6B1998B6B375C62873B18B5411012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		734FD1437D9F998F111E1E6E6364712B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8431D85157F7D038F7E72DA8E4F61B67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1554CD9E85FD0384840BC877507AA119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9352C7550BC8110DEF4222331A808EA4 /* Pods-JPromise_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B213D5DEE3C18460A8CBF7E8D89511A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA366DC4D828DB03843F1F23C2149FC /* Pods-JPromise_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E68D20B9166E75E95918D9473DA01B6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F1B9EE875B10D8FE2023FA82BD02FF /* JPromise-dummy.m in Sources */,
+				A181BF76243F402800AF9596 /* JPromise+Always.m in Sources */,
+				A181BF67243F402800AF9596 /* JPromise+Then.m in Sources */,
+				A181BF6F243F402800AF9596 /* JPromise+Internal.m in Sources */,
+				A181BF6A243F402800AF9596 /* JPromise+Catch.m in Sources */,
+				A181BF66243F402800AF9596 /* JPromiseArray.m in Sources */,
+				A181BF75243F402800AF9596 /* JPromise+Cancel.m in Sources */,
+				A181BF70243F402800AF9596 /* JPromise+All.m in Sources */,
+				A181BF69243F402800AF9596 /* NSError+Promise.m in Sources */,
+				A181BF72243F402800AF9596 /* JPromise.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B647DFABE0D2DDDF309735239C04EB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JPromise_Example";
+			target = B6D631C3BC2E258979A8C7BA5EE61BF3 /* Pods-JPromise_Example */;
+			targetProxy = E88C857BE4B9791FF4ABA5B5803267AB /* PBXContainerItemProxy */;
+		};
+		CACBDB1E090719170D913D91D5936499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JPromise;
+			target = 55CEA7BDED6388AD41D6A8A1249FD641 /* JPromise */;
+			targetProxy = D4767FC61F0ECCF03870FEA66AA8F90A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		53757AEFBB5A0B3747EBF77F6C39CA94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06DCCCEF908BF20A217CE29FB06EA8B2 /* JPromise.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JPromise/JPromise-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JPromise/JPromise-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JPromise/JPromise.modulemap";
+				PRODUCT_MODULE_NAME = JPromise;
+				PRODUCT_NAME = JPromise;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		60D592CA67402B6E4FA0F6F3DEF73A73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06DCCCEF908BF20A217CE29FB06EA8B2 /* JPromise.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JPromise/JPromise-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JPromise/JPromise-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JPromise/JPromise.modulemap";
+				PRODUCT_MODULE_NAME = JPromise;
+				PRODUCT_NAME = JPromise;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6ABFB40632CC6BA82B6C29B621BCD813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F1E6AB94129115A64BD445CDF66E0D /* Pods-JPromise_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JPromise_Example/Pods-JPromise_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPromise_Example/Pods-JPromise_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E271C3879EAE248DD2984853A44D246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50CEDBABE1C71354F88067E77CB01406 /* Pods-JPromise_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JPromise_Example/Pods-JPromise_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPromise_Example/Pods-JPromise_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A11C6F0248FC693D60BDB40915C7FC02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D18555F1EFA142DC3C5F13115AF3E9E /* Pods-JPromise_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JPromise_Tests/Pods-JPromise_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPromise_Tests/Pods-JPromise_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F5E9F01B6D83BE7BE0A12214C7DBB3C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62CA8783E20AF6F0C499E25F321168E0 /* Pods-JPromise_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JPromise_Tests/Pods-JPromise_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPromise_Tests/Pods-JPromise_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B649D96EF495EF25A45C36263B0DD74 /* Build configuration list for PBXNativeTarget "JPromise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60D592CA67402B6E4FA0F6F3DEF73A73 /* Debug */,
+				53757AEFBB5A0B3747EBF77F6C39CA94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA6CEEB1D54F34F8926938946BA1E190 /* Build configuration list for PBXNativeTarget "Pods-JPromise_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ABFB40632CC6BA82B6C29B621BCD813 /* Debug */,
+				9E271C3879EAE248DD2984853A44D246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D57056B4EAFB0DD1C048400381B4694C /* Build configuration list for PBXNativeTarget "Pods-JPromise_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11C6F0248FC693D60BDB40915C7FC02 /* Debug */,
+				F5E9F01B6D83BE7BE0A12214C7DBB3C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

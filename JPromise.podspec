@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/15012426009@163.com/JPromise'
+  s.homepage         = 'https://github.com/jams/JPromise'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '15012426009@163.com' => 'liuqiang04@corp.netease.com' }
-  s.source           = { :git => 'https://github.com/15012426009@163.com/JPromise.git', :tag => s.version.to_s }
+  s.author           = { 'jams' => '1411702600@qq.com' }
+  s.source           = { :git => 'https://github.com/jams/JPromise.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

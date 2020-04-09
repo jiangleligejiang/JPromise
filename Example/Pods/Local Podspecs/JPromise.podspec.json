@@ -1,0 +1,22 @@
+{
+  "name": "JPromise",
+  "version": "0.1.0",
+  "summary": "A short description of JPromise.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/15012426009@163.com/JPromise",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "15012426009@163.com": "liuqiang04@corp.netease.com"
+  },
+  "source": {
+    "git": "https://github.com/15012426009@163.com/JPromise.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JPromise/Classes/**/*"
+}
