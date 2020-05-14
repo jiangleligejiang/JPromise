@@ -15,6 +15,7 @@
 #import "JPromise+Always.h"
 #import "JPromise+Cancel.h"
 #import "JPromise+All.h"
+#import "JPromise+Delay.h"
 #import "JPromiseArray.h"
 #import "NSError+Promise.h"
 
