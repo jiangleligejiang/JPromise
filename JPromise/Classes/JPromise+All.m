@@ -1,6 +1,5 @@
 //
-//  CCPromise+All.m
-//  CCPlayLiveKit
+//  JPromise+All.m
 //
 //  Created by jams on 2020/1/2.
 //  Copyright © 2020 netease. All rights reserved.
@@ -12,6 +11,10 @@
 @implementation JPromise (All)
 
 + (instancetype)j_all:(NSArray *)promises {
+    return [self j_all:promises isContinue:NO];
+}
+
++ (instancetype)j_all:(NSArray *)promises isContinue:(BOOL)isContinue {
     NSParameterAssert(promises);
     if (promises.count == 0) {
         return [JPromise promiseWithValue:@[]];
@@ -31,16 +34,36 @@
             }
         }
         
+        __block NSError *promiseError = nil;
         for (JPromise *promise in allPromises) {
             [promise observeWithFulFill:^(id  _Nullable value) {
-                for (JPromise *promise in allPromises) { //保证所有promise都已经完成
-                    if (!promise.isFulfilled) {
-                        return;
+                if (isContinue && promiseError) {
+                    for (JPromise *promise in allPromises) { //保证所有promise都已经被处理
+                        if (promise.isPending) {
+                            return;
+                        }
                     }
+                    reject(promiseError);
+                } else {
+                    for (JPromise *promise in allPromises) { //保证所有promise都已经完成
+                        if (!promise.isFulfilled) {
+                            return;
+                        }
+                    }
+                    fulfill([allPromises valueForKey:NSStringFromSelector(@selector(value))]);
                 }
-                fulfill([allPromises valueForKey:NSStringFromSelector(@selector(value))]);
             } reject:^(NSError * _Nonnull error) {
-                reject(error);
+                promiseError = error;
+                if (isContinue) {
+                    for (JPromise *promise in allPromises) { //保证所有promise都已经被处理
+                        if (promise.isPending) {
+                            return;
+                        }
+                    }
+                    reject(error);
+                } else {
+                    reject(error);
+                }
             }];
         }
         

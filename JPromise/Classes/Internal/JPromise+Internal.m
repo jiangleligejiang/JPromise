@@ -1,6 +1,6 @@
 //
-//  CCPromise+Internal.m
-//  CCPlayLiveKit
+//  JPromise+Internal.m
+//  
 //
 //  Created by jams on 2020/4/4.
 //  Copyright © 2020 netease. All rights reserved.
@@ -33,7 +33,7 @@ NSString *kJPromiseRejectBlockAgrumentType = @"@?<v@?@\"NSError\">";
     @try {
         [self _callBlock:block withValue:value withQueue:queue completionBlock:completionBlock];
     } @catch (NSException *exception) {
-        NSLog(@"`CCPromise` call block with exception: %@", (exception.reason ?: @""));
+        NSLog(@"`JPromise` call block with exception: %@", (exception.reason ?: @""));
     }
 }
 

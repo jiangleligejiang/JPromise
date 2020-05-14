@@ -1,6 +1,6 @@
 //
-//  CCPromise+Cancel.h
-//  CCPlayLiveKit
+//  JPromise+Cancel.h
+//  
 //
 //  Created by jams on 2020/4/7.
 //  Copyright © 2020 netease. All rights reserved.

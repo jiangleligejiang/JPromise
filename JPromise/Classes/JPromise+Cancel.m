@@ -1,6 +1,6 @@
 //
-//  CCPromise+Cancel.m
-//  CCPlayLiveKit
+//  JPromise+Cancel.m
+//  
 //
 //  Created by jams on 2020/4/7.
 //  Copyright © 2020 netease. All rights reserved.
@@ -37,7 +37,7 @@
     [self observeWithFulFill:^(id  _Nullable value) {
         resolver(value);
     } reject:^(NSError * _Nonnull error) {
-        if (error.errorType == CCPromiseErrorTypeCancel && cancelBlock) {
+        if (error.errorType == JPromiseErrorTypeCancel && cancelBlock) {
             cancelBlock();
         }
         resolver(error);

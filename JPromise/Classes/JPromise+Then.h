@@ -1,6 +1,6 @@
 //
-//  CCPromise+Then.h
-//  CCPlayLiveKit
+//  JPromise+Then.h
+//  
 //
 //  Created by jams on 2020/4/7.
 //  Copyright © 2020 netease. All rights reserved.
@@ -16,7 +16,7 @@ typedef void(^JPromiseThenBlock)();
 
 - (JPromise *)j_then:(JPromiseThenBlock)thenBlock;
 
-- (JPromise *)j_thenAsync:(JPromiseThenBlock)thenBlock; // 提供异步操作，默认使用CCPromise.defaultAsyncQueue
+- (JPromise *)j_thenAsync:(JPromiseThenBlock)thenBlock; // 提供异步操作，默认使用JPromise.defaultAsyncQueue
 
 - (JPromise *)onQueue:(_Nullable dispatch_queue_t)queue j_then:(JPromiseThenBlock)thenBlock;
 

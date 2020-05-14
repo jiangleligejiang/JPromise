@@ -1,6 +1,6 @@
 //
-//  CCPromise+Always.m
-//  CCPlayLiveKit
+//  JPromise+Always.m
+//  
 //
 //  Created by jams on 2020/4/7.
 //  Copyright © 2020 netease. All rights reserved.
@@ -33,7 +33,7 @@
         }
         resolver(value);
     } reject:^(NSError * _Nonnull error) {
-       if (error.errorType != CCPromiseErrorTypeCancel && alwaysBlock) {
+       if (error.errorType != JPromiseErrorTypeCancel && alwaysBlock) {
            alwaysBlock();
        }
        resolver(error);

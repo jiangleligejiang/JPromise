@@ -1,6 +1,6 @@
 //
 //  JPromiseArray.m
-//  CCPlayLiveKit
+//  
 //
 //  Created by jams on 2020/1/2.
 //  Copyright © 2020 netease. All rights reserved.

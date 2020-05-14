@@ -1,6 +1,6 @@
 //
-//  CCPromise+Internal.h
-//  CCPlayLiveKit
+//  JPromise+Internal.h
+//  
 //
 //  Created by jams on 2020/4/4.
 //  Copyright © 2020 netease. All rights reserved.

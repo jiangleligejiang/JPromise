@@ -1,6 +1,5 @@
 //
-//  CCPromise.m
-//  CCPlayLiveKit
+//  JPromise.m
 //
 //  Created by jams on 2020/1/2.
 //  Copyright © 2020 netease. All rights reserved.
@@ -13,29 +12,29 @@
 
 NSString *const kCCPromiseContinualTarget = @"kCCPromiseContinualTarget"; //内部默认的target
 
-typedef void(^CCPromiseObserver)(CCPromiseState state, id _Nullable resolution);
+typedef void(^JPromiseObserver)(CCPromiseState state, id _Nullable resolution);
 
-static dispatch_queue_t cc_promise_default_async_queue;
+static dispatch_queue_t j_promise_default_async_queue;
 
 @implementation JPromise {
     CCPromiseState _state;
     id _Nullable _value;
     NSError *_Nullable _error;
     NSMutableSet *_Nullable _pendingObjects;
-    NSMutableArray<CCPromiseObserver> *_observers;
+    NSMutableArray<JPromiseObserver> *_observers;
 }
 
 #pragma mark - default queue
 
 + (dispatch_queue_t)defaultAsyncQueue {
-    return cc_promise_default_async_queue;
+    return j_promise_default_async_queue;
 }
 
 #pragma mark - init
 
 + (void)initialize {
     if (self == [JPromise class]) {
-        cc_promise_default_async_queue = dispatch_get_global_queue(0, 0);
+        j_promise_default_async_queue = dispatch_get_global_queue(0, 0);
     }
 }
 
@@ -44,11 +43,11 @@ static dispatch_queue_t cc_promise_default_async_queue;
     _observers = nil;
 }
 
-+ (instancetype)promiseWithBlock:(CCPromiseBlock)promiseBlock {
++ (instancetype)promiseWithBlock:(JPromiseBlock)promiseBlock {
     return [self promiseWithBlock:promiseBlock target:kCCPromiseContinualTarget];
 }
 
-+ (instancetype)promiseWithBlock:(CCPromiseBlock)promiseBlock target:(id)target {
++ (instancetype)promiseWithBlock:(JPromiseBlock)promiseBlock target:(id)target {
     JPromise *promise = [[JPromise alloc] initWithTarget:target];
     promiseBlock(
                 ^(id _Nullable value) {
@@ -81,14 +80,14 @@ static dispatch_queue_t cc_promise_default_async_queue;
 
 - (instancetype)initWithPending {
     if (self = [super init]) {
-        _state = CCPromiseStatePending;
+        _state = JPromiseStatePending;
     }
     return self;
 }
 
 - (instancetype)initWithTarget:(id)target {
     if (self = [super init]) {
-        _state = CCPromiseStatePending;
+        _state = JPromiseStatePending;
         _target = target;
     }
     return self;
@@ -97,33 +96,33 @@ static dispatch_queue_t cc_promise_default_async_queue;
 #pragma mark - state
 
 - (BOOL)isPending {
-    return _state == CCPromiseStatePending;
+    return _state == JPromiseStatePending;
 }
 
 - (BOOL)isFulfilled {
-    return _state == CCPromiseStateFulfilled;
+    return _state == JPromiseStateFulfilled;
 }
 
 - (BOOL)isRejected {
-    return _state == CCPromiseStateRejected;
+    return _state == JPromiseStateRejected;
 }
 
 #pragma mark - fulfill & reject
 
 - (void)fulfill:(id)value {
     if (!_target) {
-        [self reject:[NSError errorWithType:CCPromiseErrorTypeCancel]];
+        [self reject:[NSError errorWithType:JPromiseErrorTypeCancel]];
         return;
     }
     
     if ([value isKindOfClass:[NSError class]]) {
         [self reject:(NSError *)value];
     } else {
-        if (_state == CCPromiseStatePending) {
-            _state = CCPromiseStateFulfilled;
+        if (_state == JPromiseStatePending) {
+            _state = JPromiseStateFulfilled;
             _value = value;
             _pendingObjects = nil;
-            for (CCPromiseObserver observer in _observers) {
+            for (JPromiseObserver observer in _observers) {
                 observer(_state, _value);
             }
             _observers = nil;
@@ -133,11 +132,11 @@ static dispatch_queue_t cc_promise_default_async_queue;
 
 - (void)reject:(NSError *)error {
     NSAssert([error isKindOfClass:[NSError class]], @"Invalid error type");
-    if (_state == CCPromiseStatePending) {
-        _state = CCPromiseStateRejected;
+    if (_state == JPromiseStatePending) {
+        _state = JPromiseStateRejected;
         _error = error;
         _pendingObjects = nil;
-        for (CCPromiseObserver observer in _observers) {
+        for (JPromiseObserver observer in _observers) {
             observer(_state, _error);
         }
         _observers = nil;
@@ -149,17 +148,17 @@ static dispatch_queue_t cc_promise_default_async_queue;
     NSParameterAssert(onReject);
     
     switch (_state) {
-        case CCPromiseStatePending:{
+        case JPromiseStatePending:{
             if (!_observers) {
                 _observers = [NSMutableArray array];
                 [_observers addObject:^(CCPromiseState state, id _Nullable resolution){
                     switch (state) {
-                        case CCPromiseStatePending:
+                        case JPromiseStatePending:
                             break;
-                        case CCPromiseStateFulfilled:
+                        case JPromiseStateFulfilled:
                             onFulfill(resolution);
                             break;
-                        case CCPromiseStateRejected:
+                        case JPromiseStateRejected:
                             onReject(resolution);
                             break;
                     }
@@ -168,12 +167,12 @@ static dispatch_queue_t cc_promise_default_async_queue;
             break;
         }
             
-        case CCPromiseStateFulfilled: {
+        case JPromiseStateFulfilled: {
             onFulfill(_value);
             break;
         }
         
-        case CCPromiseStateRejected: {
+        case JPromiseStateRejected: {
             onReject(_error);
             break;
         }
@@ -183,7 +182,7 @@ static dispatch_queue_t cc_promise_default_async_queue;
 #pragma mark - getter
 
 - (NSMutableSet *__nullable)pendingObjects {
-    if (_state == CCPromiseStatePending) {
+    if (_state == JPromiseStatePending) {
       if (!_pendingObjects) {
         _pendingObjects = [[NSMutableSet alloc] init];
       }
